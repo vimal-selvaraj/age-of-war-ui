@@ -75,7 +75,7 @@ const Mainpage = () => {
           <p>Total Winning Arrangements: <strong>{battleResult?.data?.totalWinning || 0}</strong></p>
           {battleResult?.data !== null && battleResult?.data.arrangements.map((arr, idx) => (
             <div key={idx} className="arrangement-card">
-              <h3>Arrangement {arr.arrangementNumber} - Wins: {arr.wins}/5</h3>
+              <h3>Arrangement {arr.arrangementNumber} - Wins: {arr.wins}/{arr.order.length}</h3>
               <p><strong>Order:</strong> {arr.order.join(" ➡ ")}</p>
 
               <table className="result-table">
