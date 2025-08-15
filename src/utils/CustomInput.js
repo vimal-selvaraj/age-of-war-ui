@@ -1,7 +1,7 @@
 
 import React from 'react'
 import './input.css'
-const CustomInput = ({ handleChange, name }) => {
+const CustomInput = ({ handleChange, name,value }) => {
   return (
     <input
       className="custom__input"
@@ -10,6 +10,7 @@ const CustomInput = ({ handleChange, name }) => {
       placeholder="No of soldiers"
       onChange={handleChange}
       name={name.replace(/\s+/g, '')}
+      value={value}
     />
   )
 }

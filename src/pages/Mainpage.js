@@ -15,7 +15,7 @@ const Mainpage = () => {
     if (easternArmy.length === 0 || westernArmy.length === 0 ||
       Object.values(easternArmy).some(v => !v || Number(v) <= 0) ||
       Object.values(westernArmy).some(v => !v || Number(v) <= 0)) {
-      setError("❌ All platoons must have soldiers greater than 0.");
+      setError("All platoons must have soldiers greater than 0.");
       return;
     }
     setError("");
@@ -59,9 +59,9 @@ const Mainpage = () => {
       </div>
 
       <div className='battalions'>
-        <Battalion type='Eastern' setArmy={setEasternArmy} />
+        <Battalion type='Eastern' setArmy={setEasternArmy} easternArmy={easternArmy} westernArmy={westernArmy} />
         <div className='versus'><span>VS</span></div>
-        <Battalion type='Western' setArmy={setWesternArmy} />
+        <Battalion type='Western' setArmy={setWesternArmy} easternArmy={easternArmy} westernArmy={westernArmy} />
       </div>
       {error && <p className='error__message'>{error}</p>}
       <div className='commence__button'>

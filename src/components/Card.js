@@ -1,7 +1,7 @@
 import React from 'react'
 import CustomInput from '../utils/CustomInput'
 import './Card.css'
-const Card = ({ icon, name, description, onSoldierChange }) => {
+const Card = ({ icon, name, description, onSoldierChange, value }) => {
     const handleChange = (e) => {
         const value = e.target.value;
         onSoldierChange(name, value);
@@ -17,7 +17,7 @@ const Card = ({ icon, name, description, onSoldierChange }) => {
                     </div>
                 </div>
                 <div className='card-body'>
-                    <CustomInput handleChange={handleChange} name={name} />
+                    <CustomInput handleChange={handleChange} name={name} value={value}  />
                 </div>
             </div>
 

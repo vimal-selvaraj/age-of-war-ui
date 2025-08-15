@@ -1,7 +1,7 @@
 import Card from '../components/Card'
 import { Platoons } from '../utils/Platoon_map'
 import './Battalion.css'
-const Battalion = ({ type, setArmy }) => {
+const Battalion = ({ type, setArmy, easternArmy, westernArmy }) => {
     const handleSoldierChange = (unit, value) => {
         setArmy(prev => ({
             ...prev,
@@ -23,6 +23,7 @@ const Battalion = ({ type, setArmy }) => {
                                     name={item.unit}
                                     description={item.description}
                                     onSoldierChange={handleSoldierChange}
+                                    value={type === 'Eastern' ? easternArmy[item.unit] : westernArmy[item.unit]}
                                 />
                             ))
                         }
