@@ -1,0 +1,47 @@
+.battalion__wrapper {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.battalion__wrapper h1 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.battalion__wrapper .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.commence__button {
+    text-align: center;
+    margin: 10px 0
+}
+
+.commence__button button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #e7edf2;
+}
+
+.total__number__of__soldiers {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.error__message {
+    text-align: center;
+    margin: 10px 0;
+    color: red;
+}

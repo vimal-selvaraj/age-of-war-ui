@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 50px;
+    background-color: #e7edf2;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.battalions {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.header {
+    text-align: center;
+}
+
+.header p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: gray;
+}
+
+.battle-result {
+    margin-top: 20px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.battle-result p {
+    margin-bottom: 20px;
+}
+
+.arrangement-card {
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.result-table th,
+.result-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.result-table th {
+    background: #f4f4f4;
+}
+
+.result-table td.win {
+    color: green;
+    font-weight: bold;
+}
+
+.result-table td.loss {
+    color: red;
+    font-weight: bold;
+}
+
+.result-table td.draw {
+    color: orange;
+    font-weight: bold;
+}
+
+.versus {
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .battalions {
+        flex-direction: column;
+    }
+
+    .versus {
+        display: none;
+    }
+}
